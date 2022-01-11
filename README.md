@@ -11,7 +11,7 @@ Provides Question Answer Blocks for the [Editor.js](https://editorjs.io).
 Get the package
 
 ```shell
-yarn add github.com/ScaleMeUp/editorjs-question-answer#speka
+yarn add github.com/ScaleMeUp/editorjs-question-answer
 ```
 
 Include module at your application
