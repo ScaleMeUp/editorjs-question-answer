@@ -1,5 +1,5 @@
 {
-  "name": "@editorjs/quote",
+  "name": "@scalemeup/editorjs-question-answer",
   "version": "2.4.0",
   "keywords": [
     "codex editor",
@@ -8,9 +8,9 @@
     "editor.js",
     "editorjs"
   ],
-  "description": "Quote Tool for Editor.js",
+  "description": "Question-Answer Tool for Editor.js",
   "license": "MIT",
-  "repository": "https://github.com/editor-js/quote",
+  "repository": "https://github.com/ScaleMeUp/editorjs-question-answer.git",
   "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -28,5 +28,6 @@
     "style-loader": "^0.21.0",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "dependencies": {}
 }
