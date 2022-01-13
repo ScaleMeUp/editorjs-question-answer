@@ -70,12 +70,6 @@ var editor = EditorJS({
 | interviewerPlaceholder    | `string` | Interview's placeholder string     |
 | intervieweePlaceholder    | `string` | Interviewee's placeholder string   |
 
-## Tool's settings
-
-![](https://capella.pics/0db5d4de-c431-4cc2-90bf-bb1f4feec5df.jpg)
-
-You can choose alignment for the quote. It takes no effect while editing, but saved the «alignment» param.
-
 ## Output data
 
 | Field         | Type     | Description                |
