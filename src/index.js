@@ -185,10 +185,13 @@ class QuestionAnswer {
    * @returns {QuoteData}
    */
   save(quoteElement) {
-    const interviewer = quoteElement.querySelector(`.${this.CSS.questionWrapper} .${this.CSS.caption}`).innerHTML;
-    const question = quoteElement.querySelector(`.${this.CSS.questionWrapper} .${this.CSS.text}`).innerHTML;
-    const interviewee = quoteElement.querySelector(`.${this.CSS.answerWrapper} .${this.CSS.caption}`).innerHTML;
-    const answer = quoteElement.querySelector(`.${this.CSS.answerWrapper} .${this.CSS.text}`).innerHTML;
+    let interviewer = quoteElement.querySelector(`.${this.CSS.questionWrapper} .${this.CSS.caption}`).innerHTML;
+    let question = quoteElement.querySelector(`.${this.CSS.questionWrapper} .${this.CSS.text}`).innerText;
+    let interviewee = quoteElement.querySelector(`.${this.CSS.answerWrapper} .${this.CSS.caption}`).innerHTML;
+    let answer = quoteElement.querySelector(`.${this.CSS.answerWrapper} .${this.CSS.text}`).innerHTML;
+
+    question = question.replace(/(\r\n|\r|\n)/g, '<br>');
+    answer = answer.replace(/(\r\n|\r|\n)/g, '<br>');
 
     return Object.assign(this.data, {
       interviewer,
@@ -196,21 +199,6 @@ class QuestionAnswer {
       interviewee,
       answer,
     });
-  }
-
-  /**
-   * Sanitizer rules
-   */
-  static get sanitize() {
-    return {
-      text: {
-        br: true,
-      },
-      caption: {
-        br: true,
-      },
-      alignment: {},
-    };
   }
 
   /**
